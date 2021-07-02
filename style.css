@@ -1,0 +1,191 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    
+}
+.body{
+   margin:0;
+   position: relative;
+   max-width: 100%;
+   height: 100vh;
+   display: inline-block;
+   overflow: hidden;
+  
+}
+
+#postcard
+{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    
+    
+    width: 300px;
+    height: 300px;
+    top:calc(50vh - 55px);
+    left:calc(50vw - 150px);
+    transition: all 2.5s ease-in-out;
+   
+}
+
+#postcard > *
+{
+    position: absolute;
+    display: none;
+}
+
+#backside
+{
+ display: block;
+ z-index:0;
+ 
+}
+
+#front
+{ 
+   
+    display: block;
+    z-index: 10;
+
+  
+}
+
+#top
+{ 
+   
+    display: block;
+    z-index: 11;
+    top:-52px;
+    transform-origin: top;
+    transition: 1s 1s ease;
+   
+}
+
+#inside_letter
+{
+    display: block;
+    z-index: 5; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+     top: 0px;
+    left: 16px;
+    right: 14px;
+    bottom: 2px;
+    height: 322px;
+    width: 274px;
+
+    background-color:#e63946;
+    overflow: hidden;
+    font-size: 16px;
+    
+    transition: 1s ease;
+    
+}
+
+
+
+
+#inside_letter h1 {
+    font-size: inherit;
+}
+#inside_letter h2 {
+    font-size: inherit;
+}
+
+#inside_letter img {
+    height: 70%;
+}
+
+#postcard button {
+	z-index: 15;
+	display:block;
+	
+
+	width:50px;
+	height:50px;
+	border-radius:50%;
+	border:none;
+	background-color:gold;
+	font-weight:bold;
+	text-align: center;
+	color:white;
+	
+	cursor:pointer;
+	
+
+	top:calc(200px - 12px);
+	left:calc(150px - 24px);
+   
+}
+
+
+#postcard button:hover{
+    background-color: pink;
+    transform: scale(1.5) rotate(56deg);
+    color: black;
+
+    transition: transform 1s , background-color 1s, color 1s;
+}
+
+
+#postcard:hover #top
+{
+    transform: rotateX(180deg);
+    transition: 1s ease;
+    z-index: 3;
+}
+
+#postcard:hover #inside_letter
+{
+    top:-280px;
+    transition: 1s 1s ease;
+    transform:scale(1.8) rotate(-35deg);
+    z-index: 20;
+}
+
+#postcard:hover
+{
+    transform: rotate(35deg);
+    
+}
+#inside_letter img
+{
+    width: 95%;
+    height: 95%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.bg{
+    background-image: url("images/cool-background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    overflow: hidden;
+
+}
+::-webkit-scrollbar {
+    width: 0px;
+  }
+/* #postcard:hover #front
+{
+    transform: rotate(35deg);
+} */
+/* #postcard:hover #back
+{
+    transform: rotate(35deg);
+}
+#postcard:hover #top
+{
+    transform: rotate(35deg);
+} */
+
+
